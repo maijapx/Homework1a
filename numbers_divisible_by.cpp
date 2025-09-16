@@ -1,25 +1,27 @@
 // :D
 #include <iostream> //import
 using namespace std;
+#include <cstdlib>
 
 int main(int argc, char *argv[]) {
 
-    int i = 10;
-    while (i >= 0) {
-        i --;
-    }
-
-
-    double start = stod(argv[1]);
-    double end = stod(argv[2]);
-    int div = end / start;
+    int start = stoi(argv[1]);
+    int end = stoi(argv[2]);
+    int divisor = stoi(argv[3]);
 
     if (start < end ) {
-    for (double i = start
+        for (int i = start; i <= end; i++){
+            if (i % divisor == 0) {
+                cout << i << endl;
+            }
+        }
 
+   } else {
+        for (int i = start; i >= end; i--) {
+            if (i % divisor == 0) {
+                cout << i << endl;
+            }
+        }
     }
-    if (start >= end ) {}
-
-
     return 0;
 }
