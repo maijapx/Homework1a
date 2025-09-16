@@ -17,8 +17,6 @@ int main (int argc, char *argv[]) {
     double high = i;
     double mid;
 
-    cout << fixed << setprecision(5);
-
     while (true){
         mid = (low + high) / 2;
         double square = mid * mid;
